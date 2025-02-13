@@ -1,0 +1,171 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(34, 50%, 63%);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    font-family: "Pacifico", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.5rem;
+    position: relative;
+    top: 165px;
+    padding-left: 10px;
+    width: 98%;
+    /* color: #553c13; */
+    background: linear-gradient(#553c13, #c5881f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.msg,
+.msg-2 {
+    position: relative;
+    height: auto;
+    top: 100px;
+    left: 40px;
+    background: linear-gradient(#553c13, #c5881f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 80%;
+    font-size: 2rem;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: absolute;
+    top: 300px;
+    left: 20%;
+}
+
+.song {
+    position: relative;
+    top: 120px;
+    left: 20px;
+}
+
+.cake {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.candle {
+    width: 20px;
+    height: 50px;
+    background-color: #e6b7bf;
+    background-image: repeating-linear-gradient(45deg,
+            #e6b7bf 0,
+            #e6b7bf 5px,
+            #e35353 5px,
+            #e35353 10px);
+}
+
+.candle::after {
+    content: "";
+    height: 18px;
+    width: 18px;
+    background-color: hsl(25, 100%, 50%);
+    border-radius: 0 50% 50% 50%;
+    animation: flame 1s ease-in-out infinite alternate;
+
+    position: absolute;
+    left: 115.5px;
+    top: -20px;
+}
+
+
+@keyframes flame {
+    from {
+        transform: scale(1) rotate(15deg);
+    }
+
+    to {
+        transform: scale(1) rotate(60deg);
+    }
+
+}
+
+
+
+.bottom-layer,
+.top-layer,
+.middle-layer {
+    width: 250px;
+    height: 90px;
+    background-color: bisque;
+    border-radius: 20px 20px 0 0;
+    background-image: linear-gradient(transparent 50px,
+            #e3a953 50px,
+            #e3a953 60px,
+            transparent 60px),
+        radial-gradient(circle at 30px 3px, #f0e4d0 30px, #553c13 31px);
+    background-position: 45px 0;
+    background-size: 100% 100%, 60px 100px;
+    background-repeat: repeat;
+}
+
+.top-layer {
+    width: 150px;
+    height: 70px;
+
+}
+
+.middle-layer {
+    width: 200px;
+    height: 80px;
+
+}
+
+.hidden {
+    background: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* GLOBAL STYLES */
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+    color: #fff;
+    max-width: 90vw;
+    height: auto;
+    /* border-right: .15em solid orange; */
+    white-space: nowrap;
+    margin: 0;
+    animation:
+        typing 3.5s linear;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 80%
+    }
+}
